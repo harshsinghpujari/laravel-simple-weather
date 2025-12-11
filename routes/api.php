@@ -14,3 +14,10 @@ Route::get('/test', function () {
 
 //remember get takes two parameters  one url and other is an array which contains class and function name in string
 Route::get('/weather/{city}', [RainController::class, 'makeRain']);
+
+Route::get('/vip-lounge', function() {
+    return [
+        'status' => 200,
+        'message' => '🥂 Welcome to the VIP Lounge! Here is your free champagne. '
+    ];
+})->middleware('vip');

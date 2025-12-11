@@ -5,9 +5,9 @@ namespace App\Services;
 use App\Traits\RainTrait;
 
 
-class RainService 
+class RainService //extends nothing
 {
-  use RainTrait;
+  use RainTrait; //to kind of paste the trait logic here
 
   public function getRain($city)
   {
@@ -29,7 +29,7 @@ class RainService
 
     $endpoints = "forecast?latitude={$lat}&longitude={$long}&current_weather=true";
 
-    $data = $this->getResponse($endpoints);
+    $data = $this->getResponse($endpoints); //remember to use $this to access trait methods
 
     return $data;
 

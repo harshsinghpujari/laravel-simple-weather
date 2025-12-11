@@ -12,12 +12,14 @@ class RainController extends Controller
 
     public function __construct(RainService $service)
     {
-        $this->rainService = $service;
+        // $this->$rainService : wrong syntax
+        $this->rainService = $service; //right one
     }
 
 
     public function makeRain($city)
-    {
+    {   
+        //remember to use $this to access $rainService
         $data = $this->rainService->getRain($city);
 
         return response()->json([

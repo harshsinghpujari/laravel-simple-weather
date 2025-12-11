@@ -4,7 +4,7 @@ namespace App\Traits;
 
 use GuzzleHttp\Client;
 
-trait RainTrait 
+trait RainTrait // use trait keyword no class
 {
 
   protected $baseuri = 'https://api.open-meteo.com/v1/';

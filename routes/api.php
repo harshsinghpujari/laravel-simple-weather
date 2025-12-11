@@ -12,4 +12,5 @@ Route::get('/test', function () {
     return ["message" => 'Api is working!'];
 });
 
+//remember get takes two parameters  one url and other is an array which contains class and function name in string
 Route::get('/weather/{city}', [RainController::class, 'makeRain']);
